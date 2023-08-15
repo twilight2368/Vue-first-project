@@ -1,14 +1,13 @@
 <template>
     <div>
-        
+        <slot></slot>
     </div>
 </template>
 
 <script>
 
 export default {
-    name: 'Body',
-    
+    name: 'Body',   
 }
 
 </script>

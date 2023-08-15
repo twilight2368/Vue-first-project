@@ -2,10 +2,9 @@
   <div>
     <Header/>
   </div>
-  <div >
-    <Body/>
-  </div>
-
+  <Body>
+    <router-view/>
+  </Body>
   <div>
     <Footer/>
   </div>

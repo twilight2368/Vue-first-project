@@ -1,20 +1,20 @@
 <template>
   <div class="header">
     <div class="Header">
-    <img src="../assets/Images/cherry-blossom.png" alt="" class="logo-header" />
-    <h1> Nipponese </h1>
-  </div>
-  <div class="navigation">
-    <nav>
-      Home
-    </nav>
-    <nav>
-      About me
-    </nav>
-    <nav>
-      Contact
-    </nav>
-  </div>
+      <img
+        src="../assets/Images/cherry-blossom.png"
+        alt=""
+        class="logo-header"
+      />
+      <h1>Nipponese</h1>
+    </div>
+    <div class="navigation">
+      <nav><router-link to="/">Home</router-link> </nav>
+      <nav>
+        <router-link to="/about">About me</router-link>
+      </nav>
+      <nav> <router-link to="/contact">Contact me</router-link></nav>
+    </div>
   </div>
 </template>
 
@@ -68,7 +68,27 @@ h1 {
 }
 .navigation nav:hover {
   color: black;
-  text-decoration: underline;
-  background-color: rgba(255, 255, 255, 0.5);
+}
+
+a {
+  text-decoration: none;
+}
+.navigation nav a.router-link-exact-active {
+  color: pink;
+  padding: 0.2em;
+  border-style: inset;
+  border-top-width: 0;
+  border-right-width: 0;
+  border-left-width: 0;
+  border-bottom-width: 2px;
+  border-color: pink;
+} 
+
+a:visited {
+  color: aliceblue;
+}
+
+a:active {
+   color: pink;
 }
 </style>
