@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="main-body">
         <slot></slot>
     </div>
 </template>
@@ -12,6 +12,8 @@ export default {
 
 </script>
 
-<style>
-
+<style scoped>
+.main-body{
+    min-height: 100vh;
+}
 </style>

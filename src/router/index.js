@@ -3,6 +3,8 @@ import { createRouter, createWebHistory } from 'vue-router'
 import Home from "../views/Home.vue";
 import About from "../views/About.vue";
 import Contact from "../views/Contact.vue"
+import Blogs from "../views/Blogs.vue"
+import News from "../views/News.vue"
 
 const routes = [
   {
@@ -19,6 +21,16 @@ const routes = [
     path: "/contact",
     name: "Contact",
     component: Contact,
+  },
+  {
+    path: "/blogs",
+    name: "Blogs",
+    component: Blogs,
+  },
+  {
+    path: "/news",
+    name: "News",
+    component: News,
   },
 ];
     // route level code-splitting

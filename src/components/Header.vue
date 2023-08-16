@@ -9,11 +9,11 @@
       <h1>Nipponese</h1>
     </div>
     <div class="navigation">
-      <nav><router-link to="/">Home</router-link> </nav>
-      <nav>
-        <router-link to="/about">About me</router-link>
-      </nav>
-      <nav> <router-link to="/contact">Contact me</router-link></nav>
+      <nav><router-link to="/">Home</router-link></nav>
+      <nav><router-link to="/news">News</router-link></nav>
+      <nav><router-link to="/blogs">Blogs</router-link></nav>
+      <nav><router-link to="/contact">Contact us</router-link></nav>
+      <nav><router-link to="/about">About us</router-link></nav>
     </div>
   </div>
 </template>
@@ -30,7 +30,7 @@ export default {
   flex-direction: row;
 }
 .Header {
-  width: 50%;
+  width: 60%;
   background-color: black;
   color: azure;
   text-align: center;
@@ -44,6 +44,7 @@ export default {
 
 h1 {
   font-family: "Cherry Bomb One", cursive;
+  user-select: none;
 }
 
 .logo-header {
@@ -54,7 +55,7 @@ h1 {
 .navigation {
   background-color: black;
   color: azure;
-  width: 50%;
+  width: 40%;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
@@ -82,13 +83,13 @@ a {
   border-left-width: 0;
   border-bottom-width: 2px;
   border-color: pink;
-} 
+}
 
 a:visited {
   color: aliceblue;
 }
 
 a:active {
-   color: pink;
+  color: pink;
 }
 </style>

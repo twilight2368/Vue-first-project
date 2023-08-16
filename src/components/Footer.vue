@@ -1,5 +1,8 @@
 <template>
     <div class="Footer">
+      <div class="logo-container">
+        <img src="../assets/torii-gate.png" alt="" class="footer-logo">
+      </div>
       <div class="logo-social-media">
           <div>
             <img src="../assets/Images/facebook.png" alt="Facebook" title="Facebook">
@@ -27,8 +30,18 @@ export default {
 </script>
 
 <style scoped>
+
+.logo-container{
+  padding-top: 1em;
+  padding-bottom: 0.2em ;
+  width: 100%;
+  text-align: center;
+}
+.footer-logo{
+  height: 3em;
+}
 .Footer {
-    position: absolute;
+    position: relative;
     bottom: 0;
     width: 100%;
     background-color: black;
