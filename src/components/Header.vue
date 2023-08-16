@@ -1,12 +1,12 @@
 <template>
   <div class="header">
     <div class="Header">
-      <img
-        src="../assets/Images/cherry-blossom.png"
-        alt=""
-        class="logo-header"
-      />
-      <h1>Nipponese</h1>
+        <img
+          src="../assets/Images/cherry-blossom.png"
+          alt=""
+          class="logo-header"
+        />
+        <h1>Nipponese</h1>
     </div>
     <div class="navigation">
       <nav><router-link to="/">Home</router-link></nav>
