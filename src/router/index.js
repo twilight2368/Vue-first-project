@@ -5,6 +5,7 @@ import About from "../views/About.vue";
 import Contact from "../views/Contact.vue"
 import Blogs from "../views/Blogs.vue"
 import News from "../views/News.vue"
+import Places from '@/views/Places.vue';
 
 const routes = [
   {
@@ -32,6 +33,11 @@ const routes = [
     name: "News",
     component: News,
   },
+  {
+    path: "/places",
+    name: "Places",
+    component: Places,
+  }
 ];
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route

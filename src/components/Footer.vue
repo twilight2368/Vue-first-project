@@ -41,6 +41,7 @@ export default {
   height: 3em;
 }
 .Footer {
+    margin-top: 1em;
     position: relative;
     bottom: 0;
     width: 100%;

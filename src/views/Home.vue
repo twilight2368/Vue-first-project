@@ -28,7 +28,7 @@
             inventore dolor ratione deleniti officia fugit error, temporibus
             animi eius sapiente ea corrupti porro obcaecati? Corrupti eos amet
             voluptas possimus reiciendis!
-            <router-link to="/place"> Learn more</router-link>
+            <router-link to="/places"> Learn more</router-link>
           </div>
           <div class="small-heading">Places</div>
         </div>

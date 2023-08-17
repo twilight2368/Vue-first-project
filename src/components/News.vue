@@ -4,7 +4,7 @@
       <img src="../assets/Images/newspaper-background-concept.jpg" alt="" />
     </div>
     <div class="news-name">
-      <span>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae, maiores.</span>
+      <router-link to="/"> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae, maiores. </router-link>
       <div>01/01/0101</div>
     </div>
   </div>
@@ -36,7 +36,13 @@ export default {
   overflow-wrap: break-word;
 }
 
-.body-news:hover span{
+
+a {
+  color: azure;
+  text-decoration: none;
+}
+
+.body-news:hover a{
   color: pink;
 }
 </style>
