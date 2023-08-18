@@ -1,11 +1,13 @@
 <template>
-  <div>
-    <div>
+  <div ref="main">
+    <div class="header-app">
       <Header />
     </div>
-    <Body>
-      <router-view />
-    </Body>
+    <div class="body-app">
+      <Body>
+        <router-view />
+      </Body>
+    </div>
     <div>
       <Footer />
     </div>
@@ -30,6 +32,17 @@ export default {
 <style>
 #app {
   margin: 0;
+}
+
+.header-app {
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+}
+
+.body-app{
+  margin-top: 6.5em;
 }
 
 .header {

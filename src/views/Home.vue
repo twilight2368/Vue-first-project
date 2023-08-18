@@ -1,5 +1,8 @@
 <template>
   <div>
+    <!-- <div style="position: fixed; top: 0; z-index: 200">
+      {{ position }}
+    </div> -->
     <div class="main-body">
       <div class="main-top">
         <div class="main-japan-intro">
@@ -114,14 +117,52 @@
           <div class="small-heading">Festivals</div>
         </div>
       </div>
+
+      <div class="video">
+        <iframe
+          :src="url"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></iframe>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
-import { ArrowLongRightIcon } from "@heroicons/vue/24/outline";
 export default {
-  components: { ArrowLongRightIcon },
+  data() {
+    return {
+      color: "red",
+      position: 0,
+      url: "https://www.youtube.com/embed/aX7GMsbuz_s?autoplay=0&controls=0"
+    };
+  },
+  methods: {
+    positionSetup(currentpositon) {
+      this.position = currentpositon;
+      console.log(currentpositon);
+    },
+  },
+  mounted() {
+    window.addEventListener("scroll", () => {
+      if (window.scrollY < 800) {
+        this.position = window.scrollY - 400;
+        this.url = "https://www.youtube.com/embed/aX7GMsbuz_s?autoplay=0&controls=0"
+      } else {
+        if (window.scrollY <= 1300) {
+          this.position = window.scrollY;
+          this.url = "https://www.youtube.com/embed/aX7GMsbuz_s?autoplay=1&controls=0"
+        }else{
+          this.position = 1500 - window.scrollY;
+          this.url = "https://www.youtube.com/embed/aX7GMsbuz_s?autoplay=0&controls=0"
+        }
+      }
+      //console.log(window.scrollY);
+    });
+  },
 };
 </script>
 
@@ -240,6 +281,19 @@ export default {
   position: absolute;
   bottom: 0.5em;
   right: 0.5em;
-  color: pink;
+  color: #ffc0cb;
+}
+
+.video {
+  text-align: center;
+  width: 100%;
+  opacity: calc((min(v-bind(position), 1000) / 1000));
+  transition-delay: 4s;
+  transition: linear 0.3s;
+}
+
+iframe {
+  width: 80%;
+  height: 500px;
 }
 </style>
